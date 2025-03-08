@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Tip calculator app</title>
+</head>
+<body>
+  <img src="images/logo.svg" alt="no image" id="title">
+  <div id="container">
+    <div id="userInput">
+      <div id="amountInput">
+        <label for="amount" class="optionTitle">Bill</label><br>
+        <input type="text" id="amount" placeholder="0">
+      </div>
+  
+      <p class="optionTitle">Select Tip %</p>
+      <div id="tipPercentage">
+        <button type="button" id="five">5%</button>
+        <button type="button" id="ten">10%</button>
+        <button type="button" id="fifteen">15%</button>
+        <button type="button" id="twentyFive">25%</button>
+        <button type="button" id="fifty">50%</button>
+        <input type="text" placeholder="Custom" id="customPercent">
+      </div>
+  
+      <div id="peopleInput">
+        <label for="people" class="optionTitle" id ="errorMessage">Number of People</label><br>
+        <input type="text" placeholder="0" id="people">
+      </div>
+    </div>
+
+    <div id="result">
+      <div class="subResult">
+        <div>
+          <p class="shareHeading">Tip Amount</p>
+          <p class="person">/ person</p>
+        </div>
+        <h2 class="Share" id="tipShare">$0.00</h2>
+      </div>
+
+      <div class="subResult">
+        <div>
+          <p class="shareHeading">Total</p>
+          <p class="person">/ person</p>
+        </div>
+        <h2 class="Share" id="totalAmountShare">$0.00</h2>
+      </div>
+
+      <button type="reset" id="reset">RESET</button>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

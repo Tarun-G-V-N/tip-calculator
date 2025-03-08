@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    margin: 20px;
+}
+
+#container{
+    background-color: white;
+    width: 300px;
+    height: 660px;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: "Space Mono", monospace;
+}
+
+.optionTitle{
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+    font-size: large;
+}
+
+input{
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    font-size: large;
+    font-family: "Space Mono", monospace;
+    font-weight: 1000;
+    color: hsl(183, 100%, 15%);
+
+}
+
+input:focus{
+    outline: 2px solid hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+#amount, #people{
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 35px;
+    width: 290px;
+}
+
+#amount{
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+
+#people{
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+
+#tipPercentage{
+    display: grid;
+    grid-template-columns: 130px 130px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+#tipPercentage button{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    font-family: "Space Mono", monospace;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+#tipPercentage button:hover{
+    cursor: pointer;
+}
+
+#tipPercentage button:focus{
+    background-color: hsl(172, 67%, 45%); 
+    color: hsl(183, 100%, 15%);
+}
+
+#customPercent{
+    border-radius: 5px;
+}
+
+#peopleInput{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.peopleZeroerror{
+    outline: 2px solid tomato;
+}
+
+.errorMessage::after{
+    content: "Can't be zero";
+    color: tomato;
+    width: 200px;
+    font-size: smaller;
+    position: absolute;
+    left: 180px;
+    bottom: 40px;
+}
+
+#result{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    height: 220px;
+    position: relative;
+}
+
+.subResult{
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    position: relative;
+}
+
+.shareHeading{
+    color: white;
+}
+
+.person{
+    color: hsl(184, 14%, 56%);
+    margin-top: -15px;
+}
+
+.Share{
+    color: hsl(172, 67%, 45%);
+    position: absolute;
+    right: 20px;
+}
+
+#reset{
+    background-color: hsl(172, 67%, 45%); 
+    color: hsl(183, 100%, 15%);
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+}
+
+@media (min-width: 70em) {
+    #container{
+        width: 900px;
+        height: 390px;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        border-radius: 20px;
+    }
+
+    #userInput{
+        margin-left: 10px;
+    }
+
+    #amount, #people{
+        height: 40px;
+        width: 440px;
+    }
+
+    #tipPercentage{
+        display: grid;
+        grid-template-columns: 130px 130px 130px;
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+
+    #errorMessage::after{
+        left: 300px;
+        bottom: 50px;
+    }
+
+    #result{
+        width: 400px;
+        height: 380px;
+        border-radius: 20px;
+    }
+
+    #reset{
+        border-radius: 10px;
+        width: 360px;
+        left: 20px;
+        bottom: 30px;
+    }
+}
