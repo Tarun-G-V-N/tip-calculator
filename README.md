@@ -4,7 +4,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ### Links
 
-- Live Site URL: [Tip calculator app](https://your-live-site-url.com)
+- Live Site URL: [Tip calculator app](https://tip-calculator-three-zeta.vercel.app/)
 
 ### Built with
 
